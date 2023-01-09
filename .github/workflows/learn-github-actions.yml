@@ -1,4 +1,11 @@
 name: learn-github-actions
+# 下面的这种写法，提交到每个分支的代码都会触发工作流
+# 如果想要指定只有提交到特定分支才会触发工作流，得像这样写：
+# on:
+#   push:
+#     branches:
+#       - main
+# 注释中的这种写法代表只有提交到main分支，才会触发工作流
 on: [push]
 jobs:
   check-bats-version:
